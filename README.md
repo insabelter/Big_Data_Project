@@ -16,6 +16,9 @@ Um die Notebooks ausführen zu können, sollte folgende Reihenfolge betrachtet w
 4. Topics mittels folgender Befehle erstellen: \
 	.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic pedestrians \
 	.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic incidences
-5. Mittels der Jupyter Notebooks "Kafka Consumer" und "Kafka Producer" die MongoDB mit den beigelegten CSV-Daten füllen \
-	(Alternativ manuelles Einpflegen der CSV-Daten in die MongoDB)
+5. Mittels der Jupyter Notebooks "Kafka Consumer" und "Kafka Producer" die MongoDB mit den beigelegten CSV-Daten füllen: \
+	Zuerst die obere Zellen des Consumers ausführen, dann gleichzeitig die obere Zelle des Producers ausführen und warten, bis die Pedestrians-Daten eingelesen wurden \
+	Anschließend den Kernel beider Notebooks unterbrechen \
+	Zuletzt die untere Zellen des Consumers ausführen, dann gleichzeitig die untere Zelle des Producers ausführen und warten, bis die Corona-Daten eingelesen wurden \
+-> (Alternativ manuelles Einpflegen der CSV-Daten in die MongoDB)
 6. Notebook "Analyse und Visualisierung" ausführen, um die Ergebnisse zu betrachten
